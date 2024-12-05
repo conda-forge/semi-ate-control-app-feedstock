@@ -1,13 +1,13 @@
 {% set name = "semi-ate-control-app" %}
-{% set version = "1.0.13" %}
+{% set version = "1.0.15" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/semi-ate-control-app-{{ version }}.tar.gz
-  sha256: cab30333bba0a5b881232f4c1eedc4fede902f236efb42ba8971e4aacff55ef3
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/semi-ate-control-app-{{ version }}.tar.gz
+  sha256: e5368f2eaa9cd40127619a98dd8e307f9a3b78be005e7640a0c9a5755d0156b8
 
 build:
   number: 0
