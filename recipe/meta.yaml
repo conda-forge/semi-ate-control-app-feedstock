@@ -10,7 +10,7 @@ source:
   sha256: e5368f2eaa9cd40127619a98dd8e307f9a3b78be005e7640a0c9a5755d0156b8
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - launch_control=ate_control_app.launch_control:main
@@ -19,9 +19,9 @@ build:
 requirements:
   host:
     - pip >=3.8
-    - python
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - semi-ate-apps-common
     - semi-ate-common
     - transitions
@@ -34,6 +34,7 @@ test:
     - launch_control --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/semi-ate-control-app/
