@@ -1,16 +1,16 @@
 {% set name = "semi-ate-control-app" %}
-{% set version = "1.0.15" %}
+{% set version = "1.0.17" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/semi-ate-control-app-{{ version }}.tar.gz
-  sha256: e5368f2eaa9cd40127619a98dd8e307f9a3b78be005e7640a0c9a5755d0156b8
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 4260aaf99c2a03336d08aad926c10f59d35627c1d2bd2cb4a2dcf3177164968d
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - launch_control=ate_control_app.launch_control:main
